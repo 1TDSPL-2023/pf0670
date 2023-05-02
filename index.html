@@ -8,6 +8,8 @@
     <title>My Layout</title>
     <link rel="stylesheet" href="./css/estilo.css">
 
+    <script src="./js/script.js" defer></script>
+
     <script>
 
         //COMENTÁRIO DE LINHA
@@ -17,16 +19,23 @@
         */
 
         //Declarando variáveis com a palavra reservada ( var )
-        var nr1 = 10;
-        var nr2 = 5;
+        // var nr1 = 10;
+        // var nr2 = 5;
 
         //Objetos que dão saida em informações no Javascript
 
         //console.log(parâmetro) = Demonstra a saída no console da ferramenta do desenvolvedor.
-        console.log(nr1 + nr2);
+        // console.log(nr1 + nr2);
         
         //document.write(parâmetro) = Demonstra a saída na página html.
-        document.write(nr1 + nr2);
+        // document.write(nr1 + nr2);
+
+        //Atrelando um evento click à um elemento no HTML.
+        //<h2 id="titulo" class="tit-sec">Seção Fotos</h2>
+        // const h2Element = document.getElementById("titulo");
+
+        // console.log(h2Element.textContent);
+
     </script>
 
 </head>
@@ -46,7 +55,12 @@
     </header>
     <!-- CABEÇALHO -->
 
-    <h2 class="tit-sec">Seção Fotos</h2>
+    <h2 id="titulo" class="tit-sec">Seção Fotos</h2>
+
+    <!-- <script>
+        const h2Element = document.getElementById("titulo");
+        console.log(h2Element.textContent);
+    </script> -->
 
     <!-- CONTEÚDO -->
     <!-- section.conteudo>div*6>img+p{Legenda} -->
