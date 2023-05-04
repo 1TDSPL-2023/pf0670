@@ -87,3 +87,17 @@
 //     console.log(fruta);
 // } );
 
+let nr1 = [1,2,3,4,5];
+let nr2 = [6,7,8,9,10];
+
+//Ao invés de concatenar os arrays vamos utilizar o operador SPREAD( ... ) para melhorar a inserç~Qao dos dados no novo array.
+//CONCATENAÇÃO DE ARRAYS:
+// let nr3 = [nr1,nr2];
+let nr3 = [...nr1,...nr2];
+
+//Imprimindo o novo array concatenado.
+console.log("NOVO ARRAY : " + nr3);
+//Aplicando o forEach no novo array
+nr3.forEach((nr)=>{
+    console.log("ITENS DO NOVO ARRAY : " + nr);
+});
