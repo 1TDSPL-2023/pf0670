@@ -103,12 +103,49 @@
 // });
 
 //Converter HTMLElements em Array
-const aElements = document.getElementsByTagName("a");
-console.log(aElements);
-const aElementsArray = [...aElements];
-console.log(aElementsArray);
+// const aElements = document.getElementsByTagName("a");
+// console.log(aElements);
+// const aElementsArray = [...aElements];
+// console.log(aElementsArray);
 
-//Imprimindo atributos dos elementos recuperados...
-aElementsArray.forEach((a)=>{
-    console.log(a.href);
+// //Imprimindo atributos dos elementos recuperados...
+// aElementsArray.forEach((a)=>{
+//     console.log(a.href);
+// });
+
+//CONVERTER EM ARRAY
+// const imgElements = [...document.querySelectorAll(".conteudo img")];
+// imgElements.forEach( (img)=>{
+//     img.setAttribute("style","width:30%;")
+// });
+ 
+const inputUser = document.querySelector("input[type='email']");
+
+inputUser.addEventListener("focus", ()=>{
+    inputUser.setAttribute("style","outline-color:#ff0000;");
+});
+
+inputUser.addEventListener("keyup", ()=>{
+    const lblUser = document.querySelector("label[for='idEmail']");
+    if(inputUser.value.length < 5){
+        lblUser.innerHTML = "<span style='color:#ff0000;'>Email(Mínimo de 5 caractéres)</span>"
+        inputUser.setAttribute("style","outline-color:#ff0000;");
+    }else{
+        lblUser.innerHTML = "<span style='color:#00ff00;'>Email</span>"
+        inputUser.setAttribute("style","outline-color:#00ff00;");
+    }
+});
+
+//MOSTRAR A SENHA
+const eyePass = document.querySelector(".fa-eye");
+
+eyePass.addEventListener("click",()=>{
+    const inputPass = document.querySelector("#idPass");
+
+    //Alterar o type
+    if(inputPass.getAttribute("type") == "password"){
+        inputPass.setAttribute("type","text");
+    }else{
+        inputPass.setAttribute("type","password");
+    }
 });
