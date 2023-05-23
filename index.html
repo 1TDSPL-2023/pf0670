@@ -8,6 +8,8 @@
     <title>My Layout</title>
     <link rel="stylesheet" href="./css/estilo.css">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <script src="./js/script.js" defer></script>
 
     <script>
@@ -57,13 +59,20 @@
 
     <h2 id="titulo" class="tit-sec">Seção Fotos</h2>
 
+    <div id="welcome"></div>
+    <button id="btnSair">LOGOUT</button>
+    <div>
+        <img src="#" alt="ALUNO" id="avatar" width="20%">
+    </div>
+
+
     <!-- <script>
         const h2Element = document.getElementById("titulo");
         console.log(h2Element.textContent);
     </script> -->
 
     <!-- CONTEÚDO -->
-    <!-- section.conteudo>div*6>img+p{Legenda} -->
+    <!-- section.conteudo>div*6>img+p{Legenda}
     <section class="conteudo">
         <div>
             <img src="./img/lobo1.jpg" alt="Lobo">
@@ -89,35 +98,14 @@
             <img src="./img/lobo6.jpg" alt="Lobo">
             <p>Legenda</p>
         </div>
-    </section>
+    </section> -->
     <!-- CONTEÚDO -->
 
     <!-- RODAPÉ -->
     <footer class="rodape">
         <h2>Fale Conosco</h2>
 
-        <div>
-            <form action="/gabriel" method="post" onsubmit="return true">
-                <fieldset>
-                    <legend>Contato</legend>
-                    <div>
-                        <label for="idEmail">Email</label>
-                        <input type="email" name="txtEmail" id="idEmail" required placeholder="Email">
-                    </div>
-                    <div>
-                        <label for="idPass">Senha</label>
-                        <input type="password" name="txtPass" id="idPass" required placeholder="Senha">
-                    </div>
-                    <div>
-                        <label for="idGrava">Guardar Dados</label>
-                        <input type="checkbox" name="txtGrava" id="idGrava" required>
-                    </div>
-                    <div>
-                        <input type="submit" value="Enviar">
-                    </div>
-                </fieldset>
-            </form>
-        </div>
+
 
         <nav>
             <a href="#"><img src="./img/social-1.png" alt="Logo github"></a>
