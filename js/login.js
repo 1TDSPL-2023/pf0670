@@ -1,37 +1,43 @@
 //CONSTRUIR UMA LISTA DE OBJETOS
-// let listaDeUsuarios = [
-//     {
-//         nomeCompleto : "Edulado Capacho",
-//         emailUsuario : "dudu@email.com",
-//         senhaUsuario : "123456"
-//     },
-//     {
-//         nomeCompleto : "José das Couves",
-//         emailUsuario : "jose@email.com",
-//         senhaUsuario : "123456"
-//     },
-//     {
-//         nomeCompleto : "Paulo Cabuloso",
-//         emailUsuario : "paulo@email.com",
-//         senhaUsuario : "123456"
-//     },
-//     {
-//         nomeCompleto : "Leonaldo Tufo",
-//         emailUsuario : "lele@email.com",
-//         senhaUsuario : "123456"
-//     },
-//     {
-//         nomeCompleto : "Mathias Aires",
-//         emailUsuario : "momo@email.com",
-//         senhaUsuario : "123456"
-//     }
-// ];
+let listaDeUsuarios = [
+    {
+        nomeCompleto : "Edulado Capacho",
+        emailUsuario : "101010",
+        senhaUsuario : "123456",
+        avatar : "url"
+    },
+    {
+        nomeCompleto : "José das Couves",
+        emailUsuario : "101010",
+        senhaUsuario : "123456",
+        avatar : "url"
+    },
+    {
+        nomeCompleto : "Paulo Cabuloso",
+        emailUsuario : "101010",
+        senhaUsuario : "123456",
+        avatar : "url"
+    },
+    {
+        nomeCompleto : "Leonaldo Tufo",
+        emailUsuario : "101010",
+        senhaUsuario : "123456",
+        avatar : "url"
+    },
+    {
+        nomeCompleto : "Bianca Ritz",
+        emailUsuario : "101010",
+        senhaUsuario : "123456",
+        avatar : "url"
+    }
+];
 
 //ADICIONANDO A LISTA DE USUÁRIOS NO LOCAL-STORAGE
-// localStorage.setItem("listaUser", JSON.stringify(listaDeUsuarios));
+localStorage.setItem("listaUser", JSON.stringify(listaDeUsuarios));
 
 //RECUPERANDO OS ELEMENTOS INPUTS DO FORM
-const inputEmail = document.querySelector("#idEmail");
+//Fiz uma alteração no HTML para RM apenas. Mas aqui deixei como email.
+const inputEmail = document.querySelector("#idRm");
 const inputSenha = document.querySelector("#idPass");
 const msgStatus = document.querySelector("#msg");
 
@@ -73,8 +79,18 @@ addEventListener("click",(evt)=>{
         msgStatus.setAttribute("style","color:green");
         msgStatus.innerHTML = `<span><strong>O usuário ${usuarioValidado.nomeCompleto} logou com sucesso!!</strong></span>`;
 
+        //Adicionando o USUARIO-VALIDADO no localStorage
+        localStorage.setItem("user-validado", JSON.stringify(usuarioValidado));
+
+        //Criando um token com Math.
+        const token = Math.random().toString(16).substring(2)+Math.random().toString(16).substring(2);
+        //Adicionando o token no localStorage
+        localStorage.setItem("user-token", token);
+
         //Redirect
-        window.location.href = "../index.html";
+        setTimeout(()=>{
+            window.location.href = "../index.html";
+        },3000);
         
     }else{
         msgStatus.setAttribute("style","color:red");
